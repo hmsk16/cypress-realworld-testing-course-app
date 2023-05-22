@@ -8,5 +8,6 @@ describe('Home page', () => {
 
   it.only("the features on the homepage are correct", () => {
     cy.visit("http://localhost:3000")
+    cy.get("#email").click()
   })
 })
