@@ -35,6 +35,7 @@ describe('Home page', () => {
       cy.get("[data-test='server-error-message']").should("exist").contains("Error: john@example.com already exists. Please use a different email address.")
     })
   })
+
   context("Courses section", () => {
     it("Testing Your First Next.js Application", () => {
       cy.get("[data-test='course-0']").find('a').contains('Get started').click();
@@ -50,5 +51,6 @@ describe('Home page', () => {
       cy.get("[data-test='course-2']").find('a').contains('Get started').click();
       cy.location("pathname").should("equal", "/cypress-fundamentals")
     })
+    
   })
 })
